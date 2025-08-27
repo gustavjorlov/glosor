@@ -9,10 +9,7 @@ import { ProgressTracker } from './components/ProgressTracker';
 import type { Word } from './types';
 import './App.css';
 
-type AppView = 'week-selection' | 'game' | 'stats';
-
 function App() {
-  const [currentView, setCurrentView] = useState<AppView>('week-selection');
   const [selectedWeek, setSelectedWeek] = useState<number | null>(null);
   const [, setCurrentWordIndex] = useState(0);
   const [showResult, setShowResult] = useState(false);
@@ -33,7 +30,6 @@ function App() {
       setCurrentWordIndex(0);
       setShowResult(false);
       startNewSession(week, weekInfo.words.length);
-      setCurrentView('game');
     }
   };
 
@@ -45,7 +41,6 @@ function App() {
     
     setTimeout(() => {
       if (updatedSession?.isComplete) {
-        setCurrentView('week-selection');
         setSelectedWeek(null);
       } else {
         setCurrentWordIndex(prev => prev + 1);
@@ -64,37 +59,18 @@ function App() {
     return weekInfo.words[wordIndex] || null;
   };
 
-  const handleBackToWeeks = () => {
-    setCurrentView('week-selection');
+  const handleBackToStart = () => {
     setSelectedWeek(null);
-  };
-
-  const handleViewStats = () => {
-    setCurrentView('stats');
   };
 
   return (
     <div className="app">
       <header className="app-header">
         <h1>🇬🇧🇸🇪 Glosträning</h1>
-        <nav className="app-nav">
-          <button 
-            className={currentView === 'week-selection' ? 'active' : ''}
-            onClick={() => setCurrentView('week-selection')}
-          >
-            Veckor
-          </button>
-          <button 
-            className={currentView === 'stats' ? 'active' : ''}
-            onClick={handleViewStats}
-          >
-            Statistik
-          </button>
-        </nav>
       </header>
 
       <main className="app-main">
-        {currentView === 'week-selection' && (
+        {!selectedWeek && (
           <>
             <div className="intro-explanation">
               <h2>Hur det fungerar</h2>
@@ -120,14 +96,22 @@ function App() {
             />
 
             <BadgeSystem badges={progress.badges} recentOnly={true} />
+
+            {/* Statistics Section */}
+            <div className="stats-section">
+              <h2>Statistik</h2>
+              <ScoreDisplay progress={progress} showDetailed={true} />
+              <ProgressTracker progress={progress} availableWeeks={weekData} />
+              <BadgeSystem badges={progress.badges} showAll={true} />
+            </div>
           </>
         )}
 
-        {currentView === 'game' && currentSession && getCurrentWord() && (
+        {selectedWeek && currentSession && getCurrentWord() && (
           <div className="game-view">
             <div className="game-header">
-              <button onClick={handleBackToWeeks} className="back-button">
-                ← Tillbaka till veckor
+              <button onClick={handleBackToStart} className="back-button">
+                ← Tillbaka till start
               </button>
               <h2>Vecka {selectedWeek}</h2>
             </div>
@@ -150,14 +134,6 @@ function App() {
                 <BadgeSystem badges={progress.badges} recentOnly={true} />
               </div>
             )}
-          </div>
-        )}
-
-        {currentView === 'stats' && (
-          <div className="stats-view">
-            <ScoreDisplay progress={progress} showDetailed={true} />
-            <ProgressTracker progress={progress} availableWeeks={weekData} />
-            <BadgeSystem badges={progress.badges} showAll={true} />
           </div>
         )}
       </main>

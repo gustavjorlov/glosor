@@ -35,11 +35,10 @@ body {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -53,41 +52,6 @@ body {
   font-weight: 700;
   text-align: center;
   margin: 0;
-}
-
-.app-nav {
-  display: flex;
-  gap: 0.5rem;
-  width: 100%;
-  max-width: 300px;
-}
-
-.app-nav button {
-  background: #f7fafc;
-  border: 2px solid #e2e8f0;
-  color: #2d3748;
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  flex: 1;
-  text-align: center;
-  min-height: 44px;
-}
-
-.app-nav button:hover {
-  border-color: #667eea;
-  background: #edf2f7;
-  transform: translateY(-1px);
-}
-
-.app-nav button.active {
-  background: #667eea;
-  color: white;
-  border-color: #667eea;
-  box-shadow: 0 4px 14px rgba(102, 126, 234, 0.3);
 }
 
 /* Main content */
@@ -571,6 +535,28 @@ body {
   font-weight: 500;
 }
 
+/* Stats Section */
+.stats-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+.stats-section h2 {
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .stats-section {
+    margin-top: 4rem;
+    padding-top: 3rem;
+  }
+}
+
 /* Stats View */
 .stats-view {
   display: flex;
@@ -648,23 +634,11 @@ body {
 /* Desktop styles */
 @media (min-width: 768px) {
   .app-header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1.5rem 2rem;
+    padding: 2rem;
   }
   
   .app-header h1 {
     font-size: 2rem;
-  }
-  
-  .app-nav {
-    width: auto;
-    max-width: none;
-  }
-  
-  .app-nav button {
-    font-size: 1rem;
-    padding: 0.875rem 1.5rem;
   }
   
   .app-main {
@@ -731,8 +705,7 @@ body {
 /* Focus styles for accessibility */
 .week-card:focus,
 .submit-button:focus,
-.back-button:focus,
-.app-nav button:focus {
+.back-button:focus {
   outline: 3px solid #667eea;
   outline-offset: 2px;
 }
@@ -770,23 +743,6 @@ body {
     color: #f7fafc;
   }
   
-  .app-nav button {
-    background: #4a5568;
-    color: #f7fafc;
-    border-color: #718096;
-  }
-  
-  .app-nav button:hover {
-    background: #2d3748;
-    border-color: #667eea;
-  }
-  
-  .app-nav button.active {
-    background: #667eea;
-    color: white;
-    border-color: #667eea;
-  }
-  
   .intro-explanation,
   .week-selector,
   .progress-tracker,
@@ -804,7 +760,8 @@ body {
   .week-selector h2,
   .badge-system h3,
   .game-header h2,
-  .session-complete h3 {
+  .session-complete h3,
+  .stats-section h2 {
     color: #f7fafc;
   }
   
