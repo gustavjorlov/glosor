@@ -24,17 +24,17 @@ export function useWordData() {
     setError(null);
     
     const loadedWeeks: WeekData[] = [];
-    let week = 1;
     
-    while (week <= 20) {
+    // Try to load weeks 1-50 (expanded range), but don't break on missing weeks
+    for (let week = 1; week <= 50; week++) {
       const data = await loadWeekData(week);
       if (data) {
         loadedWeeks.push(data);
-        week++;
-      } else {
-        break;
       }
     }
+    
+    // Sort by week number to ensure proper ordering
+    loadedWeeks.sort((a, b) => a.week - b.week);
     
     setWeekData(loadedWeeks);
     setLoading(false);

@@ -1,0 +1,57 @@
+{
+  "week": 36,
+  "title": "Vecka 36",
+  "description": "Ord för vecka 36",
+  "words": [
+    {
+      "id": "w36_1",
+      "english": "children",
+      "swedish": "barn"
+    },
+    {
+      "id": "w36_2",
+      "english": "school",
+      "swedish": "skola"
+    },
+    {
+      "id": "w36_3",
+      "english": "tired",
+      "swedish": "trött"
+    },
+    {
+      "id": "w36_4",
+      "english": "hungry",
+      "swedish": "hungrig"
+    },
+    {
+      "id": "w36_5",
+      "english": "bag",
+      "swedish": "väska"
+    },
+    {
+      "id": "w36_6",
+      "english": "a lot of",
+      "swedish": "mycket, många"
+    },
+    {
+      "id": "w36_7",
+      "english": "homework",
+      "swedish": "läxa"
+    },
+    {
+      "id": "w36_8",
+      "english": "what's that",
+      "swedish": "vad är det där"
+    },
+    {
+      "id": "w36_9",
+      "english": "loud",
+      "swedish": "högt"
+    },
+    {
+      "id": "w36_10",
+      "english": "noise",
+      "swedish": "ljud"
+    }
+  ]
+}

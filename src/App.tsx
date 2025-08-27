@@ -96,6 +96,15 @@ function App() {
       <main className="app-main">
         {currentView === 'week-selection' && (
           <>
+            <div className="intro-explanation">
+              <h2>Hur det fungerar</h2>
+              <p>
+                Träna dina engelska glosor genom att svara på frågor från olika veckor. 
+                För att markera en vecka som <strong>slutförd</strong> behöver du få minst <strong>80% rätt</strong> 
+                (16 av 20 frågor). Dina resultat sparas oavsett poäng.
+              </p>
+            </div>
+
             <ProgressTracker 
               progress={progress} 
               availableWeeks={weekData} 
