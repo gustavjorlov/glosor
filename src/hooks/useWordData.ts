@@ -8,7 +8,7 @@ export function useWordData() {
 
   const loadWeekData = async (week: number): Promise<WeekData | null> => {
     try {
-      const response = await fetch(`/data/vecka${week}.json`);
+      const response = await fetch(`./data/vecka${week}.json`);
       if (!response.ok) {
         throw new Error(`Failed to load week ${week} data`);
       }
