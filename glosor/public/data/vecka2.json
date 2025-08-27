@@ -1,0 +1,57 @@
+{
+  "week": 2,
+  "title": "Djur",
+  "description": "Lär dig ord om olika djur",
+  "words": [
+    {
+      "id": "w2_1",
+      "english": "dog",
+      "swedish": "hund"
+    },
+    {
+      "id": "w2_2",
+      "english": "cat",
+      "swedish": "katt"
+    },
+    {
+      "id": "w2_3",
+      "english": "bird",
+      "swedish": "fågel"
+    },
+    {
+      "id": "w2_4",
+      "english": "horse",
+      "swedish": "häst"
+    },
+    {
+      "id": "w2_5",
+      "english": "cow",
+      "swedish": "ko"
+    },
+    {
+      "id": "w2_6",
+      "english": "pig",
+      "swedish": "gris"
+    },
+    {
+      "id": "w2_7",
+      "english": "fish",
+      "swedish": "fisk"
+    },
+    {
+      "id": "w2_8",
+      "english": "mouse",
+      "swedish": "mus"
+    },
+    {
+      "id": "w2_9",
+      "english": "rabbit",
+      "swedish": "kanin"
+    },
+    {
+      "id": "w2_10",
+      "english": "bear",
+      "swedish": "björn"
+    }
+  ]
+}

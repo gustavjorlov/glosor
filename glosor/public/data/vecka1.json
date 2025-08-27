@@ -1,0 +1,57 @@
+{
+  "week": 1,
+  "title": "Familj och hem",
+  "description": "Lär dig ord om familj och hemmet",
+  "words": [
+    {
+      "id": "w1_1",
+      "english": "family",
+      "swedish": "familj"
+    },
+    {
+      "id": "w1_2",
+      "english": "mother",
+      "swedish": "mamma"
+    },
+    {
+      "id": "w1_3",
+      "english": "father",
+      "swedish": "pappa"
+    },
+    {
+      "id": "w1_4",
+      "english": "brother",
+      "swedish": "bror"
+    },
+    {
+      "id": "w1_5",
+      "english": "sister",
+      "swedish": "syster"
+    },
+    {
+      "id": "w1_6",
+      "english": "house",
+      "swedish": "hus"
+    },
+    {
+      "id": "w1_7",
+      "english": "home",
+      "swedish": "hem"
+    },
+    {
+      "id": "w1_8",
+      "english": "room",
+      "swedish": "rum"
+    },
+    {
+      "id": "w1_9",
+      "english": "kitchen",
+      "swedish": "kök"
+    },
+    {
+      "id": "w1_10",
+      "english": "bedroom",
+      "swedish": "sovrum"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "week": 3,
+  "title": "Färger",
+  "description": "Lär dig färgernas namn",
+  "words": [
+    {
+      "id": "w3_1",
+      "english": "red",
+      "swedish": "röd"
+    },
+    {
+      "id": "w3_2",
+      "english": "blue",
+      "swedish": "blå"
+    },
+    {
+      "id": "w3_3",
+      "english": "green",
+      "swedish": "grön"
+    },
+    {
+      "id": "w3_4",
+      "english": "yellow",
+      "swedish": "gul"
+    },
+    {
+      "id": "w3_5",
+      "english": "black",
+      "swedish": "svart"
+    },
+    {
+      "id": "w3_6",
+      "english": "white",
+      "swedish": "vit"
+    },
+    {
+      "id": "w3_7",
+      "english": "orange",
+      "swedish": "orange"
+    },
+    {
+      "id": "w3_8",
+      "english": "pink",
+      "swedish": "rosa"
+    },
+    {
+      "id": "w3_9",
+      "english": "purple",
+      "swedish": "lila"
+    },
+    {
+      "id": "w3_10",
+      "english": "brown",
+      "swedish": "brun"
+    }
+  ]
+}
