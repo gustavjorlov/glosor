@@ -47,7 +47,7 @@ export function BadgeSystem({ badges, showAll = false, recentOnly = false }: Bad
         {displayBadges.map((badge) => (
           <div key={badge.id} className="badge-item">
             <div className="badge-icon">{badge.icon}</div>
-            <div className="badge-info">
+            <div className="badge-content">
               <div className="badge-name">{badge.name}</div>
               <div className="badge-description">{badge.description}</div>
               <div className="badge-date">
@@ -82,7 +82,7 @@ export function BadgeNotification({ badges, onDismiss }: BadgeNotificationProps)
         {badges.map(badge => (
           <div key={badge.id} className="new-badge">
             <span className="badge-icon large">{badge.icon}</span>
-            <div className="badge-info">
+            <div className="badge-content">
               <div className="badge-name">{badge.name}</div>
               <div className="badge-description">{badge.description}</div>
             </div>
